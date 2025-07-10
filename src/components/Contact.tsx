@@ -66,7 +66,7 @@ const Contact = () => {
                 size="lg"
                 onClick={() => {
                   const link = document.createElement('a');
-                  link.href = 'public/Swarna_Nallam_Resume.pdf';
+                  link.href = '/swarna-portfolio/Swarna_Nallam_Resume.pdf';
                   link.download = 'Swarna_Nallam_Resume.pdf';
                   link.click();
                 }}

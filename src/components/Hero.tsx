@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="animate-fade-in">
           <div className="mb-8">
             <img 
-              src="public/profile.jpeg" 
+              src="/swarna-portfolio/profile.jpeg" 
               alt="Swarna Nallam" 
               className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 border-4 border-white/20 shadow-glow object-cover"
             />
@@ -41,7 +41,7 @@ const Hero = () => {
               className="min-w-[180px] bg-white/10 text-white border-white/30 hover:bg-white/20"
               onClick={() => {
                 const link = document.createElement('a');
-                link.href = 'public/Swarna_Nallam_Resume.pdf';
+                link.href = '/swarna-portfolio/Swarna_Nallam_Resume.pdf';
                 link.download = 'Swarna_Nallam_Resume.pdf';
                 link.click();
               }}

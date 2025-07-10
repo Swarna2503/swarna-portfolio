@@ -11,14 +11,18 @@ export default defineConfig(({ mode }) => ({
 
   plugins: [
     react(),
-    // only run the tagger in dev
     mode === "development" && componentTagger(),
   ].filter(Boolean),
 
-  // ⬇️ use “/” locally, and the exact GitHub‐Pages subpath in prod
-  base: mode === "development"
-    ? "/"
-    : "/swarna-portfolio/",
+  // “/” in dev so vite dev still works;
+  // in prod, assets are loaded relative to your repo path
+  base: mode === "development" ? "/" : "/swarna-portfolio/",
+
+  // build into docs/ instead of dist/
+  build: {
+    outDir: "docs",
+    emptyOutDir: true,
+  },
 
   resolve: {
     alias: {
